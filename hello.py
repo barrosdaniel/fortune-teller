@@ -1,0 +1,1 @@
+print('Hello, fortune-teller')
