@@ -1,8 +1,11 @@
 from django.shortcuts import render
+import random
 
 # Create your views here.
 def fortune(request):
-    return render(request, 'randomfortune/fortune.html')
+    fortune = random.choice(fortuneList)
+    context = {"fortune": fortune}
+    return render(request, 'randomfortune/fortune.html', context)
 
 fortuneList = [
    "All will go well with your new project.",
